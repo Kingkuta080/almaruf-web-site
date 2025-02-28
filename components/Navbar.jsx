@@ -169,7 +169,7 @@ export default function Navbar() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden text-gray-800 py-4 px-2 rounded-b-lg shadow-lg" ref={mobileDropdownRef}>
+          <div className="md:hidden text-gray-900 py-4 px-2 rounded-b-lg " ref={mobileDropdownRef}>
             <div className="flex flex-col space-y-4 items-center">
               <button
                 onClick={() => scrollToSection("about")}
@@ -187,7 +187,7 @@ export default function Navbar() {
                     {openMobileDropdown === dropdown.id ? <ChevronUp className="ml-1" /> : <ChevronDown className="ml-1" />}
                   </button>
                   {openMobileDropdown === dropdown.id && (
-                    <div className="mt-2 w-full bg-white shadow-lg rounded-lg">
+                    <div className="mt-2 w-full bg-white rounded-lg">
                       {dropdown.items.map((item) => (
                         <button
                           key={item.id}
