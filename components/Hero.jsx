@@ -28,8 +28,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 5000); // Change slide every 5 seconds
-
+    }, 5000);
     return () => clearInterval(interval);
   }, [slides.length]);
 
@@ -62,41 +61,28 @@ export default function Hero() {
       </AnimatePresence>
 
       <div className="container relative z-10 mx-auto px-4 text-center">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-3xl mx-auto text-white"
-          >
-            <h1 className="text-5xl font-bold mb-6">
-              {slides[currentSlide].title}
-            </h1>
-            <p className="text-xl mb-8">
-              {slides[currentSlide].description}
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Button
-                size="lg"
-                onClick={() => scrollToSection('apply')}
-                className="hover:bg-primary-dark transition-colors duration-300"
-              >
-                Apply Now
-              </Button>
-              <Button
-                variant="ghost"
-                size="lg"
-                style={{ borderColor: 'white' }}
-                onClick={() => scrollToSection('programs')}
-                className="hover:bg-white hover:text-black transition-colors duration-300"
-              >
-                Learn More
-              </Button>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        <div className="max-w-3xl mx-auto text-white">
+          <h1 className="text-5xl font-bold mb-6">{slides[currentSlide].title}</h1>
+          <p className="text-xl mb-8">{slides[currentSlide].description}</p>
+          <div className="flex gap-4 justify-center">
+            <Button
+              size="lg"
+              onClick={() => scrollToSection('apply')}
+              className="bg-white text-black hover:bg-[#6b292a] hover:text-[#be9a60] transition-colors duration-300"
+            >
+              Apply Now
+            </Button>
+            <Button
+              variant="ghost"
+              size="lg"
+              style={{ borderColor: 'white' }}
+              onClick={() => scrollToSection('programs')}
+              className="text-white border border-white hover:bg-[#be9a60] hover:text-[#6b292a] transition-colors duration-300"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
       </div>
 
       {/* Slide Indicators */}
@@ -106,7 +92,7 @@ export default function Hero() {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-              currentSlide === index ? 'bg-white' : 'bg-gray-400'
+              currentSlide === index ? 'bg-white' : 'bg-gray-400 hover:bg-[#6b292a]'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

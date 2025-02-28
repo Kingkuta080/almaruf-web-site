@@ -2,7 +2,7 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import { Provost, Hod_him, Hod_nursing, Registrars } from "../assets/index";
+import { Cl,Bur,Pro,Chafo,Reg, } from "../assets/index";
 import { motion } from "framer-motion";
 
 export default function Principal() {
@@ -10,22 +10,27 @@ export default function Principal() {
     {
       title: "Provost",
       description: "Mal. Musa Mamman",
-      image: Provost,
+      image: Pro,
     },
     {
-      title: "Registrar",
+      title: "Registrar/Secretary",
       description: "Mal. Usman Alh. Saleh",
-      image: Registrars,
+      image: Reg,
     },
     {
-      title: "HOD Nursing",
-      description: "Muhammad Aliyu",
-      image: Hod_nursing,
+      title: "Chairman/Founder",
+      description: "Prof. Ibrahim Abdullahi Sani",
+      image: Chafo,
     },
     {
-      title: "HOD Health Information Management",
-      description: "Ayeni Christiana",
-      image: Hod_him,
+      title: "Bursar ",
+      description: "Mal. Ya`u Alhaji Ahmed",
+      image: Bur,
+    },
+    {
+      title: "College Librarian",
+      description: "Adamu Musa Yusuf",
+      image: Cl,
     },
   ];
 
@@ -36,7 +41,7 @@ export default function Principal() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center mb-6 text-gray-900"
+          className="text-4xl font-bold text-center mb-6 text-gray-900 text-[#6b292a]"
         >
           Principal Officers
         </motion.h2>
@@ -52,7 +57,7 @@ export default function Principal() {
           manages the overall affairs of the college.
         </motion.p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {officers.map((officer, index) => (
             <motion.div
               key={index}

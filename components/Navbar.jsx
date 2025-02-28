@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Menu, ChevronDown, ChevronUp } from "lucide-react";
+import Image from "next/image";
+import {Logo} from "@/assets/index";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,6 +12,7 @@ export default function Navbar() {
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
 
   const dropdownRef = useRef(null);
+
   const mobileDropdownRef = useRef(null);
 
   useEffect(() => {
@@ -98,8 +101,13 @@ export default function Navbar() {
       <div className="container mx-auto px-9">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center space-x-2">
-            <GraduationCap className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold">Al-Ma’arif College</span>
+            <Image
+              src={Logo}
+              alt="Al-Ma’arif College"
+              width={60}
+              className="rounded-full"
+
+            />
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -146,7 +154,7 @@ export default function Navbar() {
             <Button
               size="lg"
               onClick={() => scrollToSection("apply")}
-              className="hover:bg-primary-dark transition-colors duration-300"
+              className="bg-[#6b292a] transition-colors duration-300"
             >
               Apply Now
             </Button>
@@ -205,7 +213,7 @@ export default function Navbar() {
               </button>
               <Button
                 onClick={() => scrollToSection("apply")}
-                className="w-full"
+                className="bg-[#6b292a] text-white transition-colors duration-300"
                 variant="outline"
                 size="lg"
                 style={{ borderColor: "black" }}

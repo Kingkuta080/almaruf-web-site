@@ -27,7 +27,7 @@ export default function Depart() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center mb-12"
+          className="text-4xl font-bold text-center text-[#6b292a] mb-12"
         >
           Our Departments
         </motion.h2>

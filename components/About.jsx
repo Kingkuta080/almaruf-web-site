@@ -7,10 +7,8 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   const aboutUsContent = `
-    Welcome to Al-Ma’arif College
-    The College is located in Potiskum, the commercial nerve center of Yobe State, 5km along Kano road opposite Nomadic Primary School Dumbulwa. The institution was established as a College of Nursing, Midwifery & Health Sciences on 8th November 2021. The College is owned by a group of public spirited committed to bridge the gap in manpower in the state..
-
-    It is a well-established fact that in Nigeria today, there is an acute shortage of trained and professionally medical and health personnel to meet the basic health needs of the ever increasing population; thus the reason behind my personal conviction on the necessity of contributing my quota towards bridging those gaps by establishing Alma’arif College of Health Sciences & Technology..`;
+  The institution was established as a College of Nursing, Midwifery & Health Sciences on 8th November 2021. The College is owned by a group of public spirited committed to bridge the gap in manpower in the state.
+    It is a well-established fact that in Nigeria today, there is an acute shortage of trained and professionally medical and health personnel to meet the basic health needs of the ever increasing population; thus the reason behind my personal conviction on the necessity of contributing my quota towards bridging those gaps by establishing Alma’arif College of Health Sciences & Technology.`;
 
   const aimContent = "To promote medical excellence in health sciences at the National and International levels.";
 
@@ -25,7 +23,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center mb-12"
+          className="text-4xl font-bold text-center text-[#6b292a] mb-12"
         >
           About Al-Ma’arif College
         </motion.h2>

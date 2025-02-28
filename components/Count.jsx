@@ -64,7 +64,7 @@ function StatCard({ stat }) {
       transition={{ duration: 0.6 }}
       className="flex flex-col items-center text-center p-6 rounded-lg bg-gray-100 hover:shadow-xl transition-shadow duration-300"
     >
-      <stat.icon className="w-12 h-12 mb-4 text-yellow-400" />
+      <stat.icon className="w-12 h-12 mb-4 text-[#be9a60]" />
       <motion.h3 className="text-4xl font-bold mb-2" aria-label={stat.label}>
         {formattedValue}
       </motion.h3>
