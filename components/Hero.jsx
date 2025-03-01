@@ -2,24 +2,24 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { bg2, bg3, bg4 } from '@/public';
+import { Bg2, Bg3, Bg4 } from '@/public/index';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      image: bg3,
+      image: Bg3,
       title: "Welcome to Al-Ma’arif College...",
       description: "Welcome to Al-Ma’arif College. The institution was established as a College of Nursing, Midwifery & Health Sciences on 8th November 2021. The College is owned by a group of public spirited committed to bridge the gap in manpower in the state.",
     },
     {
-      image: bg2,
+      image: Bg2,
       title: "Our Students Are Trained Using Modern Science Equipment",
       description: "Our Students Are Trained Using Modern Science Equipment. Join us to explore cutting-edge programs designed to prepare you for the challenges of the future.",
     },
     {
-      image: bg4,
+      image: Bg4,
       title: "Choose the Right College for Your Health Education",
       description: "Choose the Right College for Your Health Education. Discover a vibrant community dedicated to your academic and personal growth.",
     },

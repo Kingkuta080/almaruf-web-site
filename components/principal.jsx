@@ -2,7 +2,7 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import { Cl,Bur,Pro,Chafo,Reg,Dap } from "@/public/index";
+import { Bursar,Chairman,College,Dap,Provo,Reg } from "@/public/index";
 import { motion } from "framer-motion";
 
 export default function Principal() {
@@ -10,7 +10,7 @@ export default function Principal() {
     {
       title: "Provost",
       description: "Mal. Musa Mamman",
-      image: Pro,
+      image: Provo,
     },
     {
       title: "Registrar/Secretary",
@@ -20,17 +20,17 @@ export default function Principal() {
     {
       title: "Chairman/Founder",
       description: "Prof. Ibrahim Abdullahi Sani",
-      image: Chafo,
+      image: Chairman,
     },
     {
       title: "Bursar ",
       description: "Mal. Ya`u Alhaji Ahmed",
-      image: Bur,
+      image: Bursar,
     },
     {
       title: "College Librarian",
       description: "Adamu Musa Yusuf",
-      image: Cl,
+      image: College,
     },
     {
       title: "Director Academic Planning",

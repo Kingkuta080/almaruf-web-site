@@ -2,7 +2,7 @@
 import React from 'react';
 import { Award, School, Globe } from 'lucide-react';
 import Image from 'next/image';
-import { bg } from '@/public/index';
+import { Bg } from '@/public/index';
 import { motion } from 'framer-motion';
 
 export default function About() {
@@ -71,7 +71,7 @@ export default function About() {
             className="relative h-[100%] rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
             <Image
-              src={bg}
+              src={Bg}
               alt="School Values"
               fill
               className="object-cover"

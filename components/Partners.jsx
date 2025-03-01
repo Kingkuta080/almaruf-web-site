@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Nmcn, Nteb, P3, Yobe } from '@/public/index';
+import { Nurse, Nteb, P3, Yobe } from '@/public/index';
 import { motion } from 'framer-motion';
 
 export default function Partners() {
@@ -10,7 +10,7 @@ export default function Partners() {
     { logo: Yobe, alt: 'Yobe State Government', href: 'https://yobestate.gov.ng/' },
     { logo: Nteb, alt: 'Nigerian Tertiary Education Board', href: 'https://web.nbte.gov.ng/' },
     { logo: P3, alt: 'P3 Organization', href: 'https://ysu.edu.ng/ysu/' },
-    { logo: Nmcn, alt: 'Nigerian Medical Council of Nigeria', href: 'https://nmcn.gov.ng' },
+    { logo: Nurse, alt: 'Nigerian Medical Council of Nigeria', href: 'https://nmcn.gov.ng' },
   ];
 
   return (
