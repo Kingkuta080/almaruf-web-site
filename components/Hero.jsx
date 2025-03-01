@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { bg2, bg3, bg4 } from '../assets/index';
+import { bg2, bg3, bg4 } from '@/public';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Hero() {

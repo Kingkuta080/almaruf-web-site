@@ -3,7 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import Image from 'next/image';
-import {Logo2} from '@/assets/index'
+import {Logo2} from '@/public/index'
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,15 +26,17 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* <h3 className="text-xl font-semibold mb-4">Al-Ma’arif College</h3> */}
+            <Link href="/">
             <Image
               src={Logo2}
               alt="Al-Ma’arif College"
               width={60}
               className="rounded-full"
             />
+            </Link>
+            <h3 className="text-xl font-semibold mb-4">Al-Ma’arif College</h3>
             <p className="text-sm text-primary-foreground/80">
-            Welcome to Al-Ma’arif College. The institution was established as a College of Nursing, Midwifery & Health Sciences on 8th November 2021. The College is owned by a group of public spirited committed to bridge the gap in manpower in the state.
+            Welcome to Al-Ma’arif College. The institution was established as a College of Nursing, Midwifery & Health Sciences on 8th November 2021.
             </p>
           </motion.div>
 

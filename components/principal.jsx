@@ -2,7 +2,7 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import { Cl,Bur,Pro,Chafo,Reg, } from "../assets/index";
+import { Cl,Bur,Pro,Chafo,Reg,Dap } from "@/public/index";
 import { motion } from "framer-motion";
 
 export default function Principal() {
@@ -32,6 +32,11 @@ export default function Principal() {
       description: "Adamu Musa Yusuf",
       image: Cl,
     },
+    {
+      title: "Director Academic Planning",
+      description: "Abdulrahman Muktar",
+      image: Dap,
+    },
   ];
 
   return (
@@ -57,7 +62,7 @@ export default function Principal() {
           manages the overall affairs of the college.
         </motion.p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {officers.map((officer, index) => (
             <motion.div
               key={index}
@@ -70,15 +75,16 @@ export default function Principal() {
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
-                  className="relative h-64 group"
+                  className="relative h-80 group"
                 >
                   <Image
                     src={officer.image}
                     alt={officer.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                    priority
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-t-lg"
+
                   />
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-90" />
@@ -94,10 +100,6 @@ export default function Principal() {
           ))}
         </div>
       </div>
-      <section className="principal">
-        <h2>Message from the Principal</h2>
-        <p>Welcome to our school. We are committed to providing quality education.</p>
-      </section>
     </div>
   );
 }

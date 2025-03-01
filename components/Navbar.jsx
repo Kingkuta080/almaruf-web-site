@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Menu, ChevronDown, ChevronUp } from "lucide-react";
+import { Menu, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
-import {Logo} from "@/assets/index";
+import {Logo} from "@/public/index";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -101,19 +102,21 @@ export default function Navbar() {
       <div className="container mx-auto px-9">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center space-x-2">
+            <Link href="/">
             <Image
               src={Logo}
               alt="Al-Ma’arif College"
               width={60}
               className="rounded-full"
-
             />
+            </Link>
+            <h3 className="text-md font-semibold text-[#be9a60]">Al-Ma’arif College</h3>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("about")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-[#6b292a] transition-colors text-md font-semibold text-[#be9a60]"
             >
               About Us
             </button>
@@ -121,7 +124,7 @@ export default function Navbar() {
               <div key={dropdown.id} className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => toggleDropdown(dropdown.id)}
-                  className="hover:text-primary transition-colors flex items-center"
+                  className="hover:text-[#6b292a] transition-colors flex items-center text-md font-semibold text-[#be9a60]"
                 >
                   {dropdown.label}
                   {openDropdown === dropdown.id ? <ChevronUp className="ml-1" /> : <ChevronDown className="ml-1" />}
@@ -136,7 +139,7 @@ export default function Navbar() {
                             ? (window.location.href = item.external)
                             : scrollToSection(item.id)
                         }
-                        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                        className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-md font-semibold text-[#be9a60] hover:text-[#6b292a]"
                       >
                         {item.label}
                       </button>
@@ -147,7 +150,7 @@ export default function Navbar() {
             ))}
             <button
               onClick={() => scrollToSection("contact")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-[#6b292a] transition-colors text-md font-semibold text-[#be9a60]"
             >
               Contact Us
             </button>
@@ -173,7 +176,7 @@ export default function Navbar() {
             <div className="flex flex-col space-y-4 items-center">
               <button
                 onClick={() => scrollToSection("about")}
-                className="hover:text-primary transition-colors py-2 text-center"
+                className="hover:text-[#6b292a] transition-colors py-2 text-center text-md font-semibold text-[#be9a60]"
               >
                 About Us
               </button>
@@ -181,7 +184,7 @@ export default function Navbar() {
                 <div key={dropdown.id} className="relative">
                   <button
                     onClick={() => toggleMobileDropdown(dropdown.id)}
-                    className="hover:text-primary transition-colors py-2 flex items-center justify-center"
+                    className="hover:text-[#6b292a] transition-colors py-2 flex items-center justify-center text-md font-semibold text-[#be9a60]"
                   >
                     {dropdown.label}
                     {openMobileDropdown === dropdown.id ? <ChevronUp className="ml-1" /> : <ChevronDown className="ml-1" />}
@@ -196,7 +199,7 @@ export default function Navbar() {
                               ? (window.location.href = item.external)
                               : scrollToSection(item.id)
                           }
-                          className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-center"
+                          className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-center text-md font-semibold text-[#be9a60] hover:text-[#6b292a]"
                         >
                           {item.label}
                         </button>
@@ -207,7 +210,7 @@ export default function Navbar() {
               ))}
               <button
                 onClick={() => scrollToSection("contact")}
-                className="hover:text-primary transition-colors py-2 text-center"
+                className="hover:text-[#6b292a] transition-colors py-2 text-center text-md font-semibold text-[#be9a60]"
               >
                 Contact Us
               </button>

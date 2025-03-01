@@ -2,7 +2,7 @@
 import React from 'react';
 import { Award, School, Globe } from 'lucide-react';
 import Image from 'next/image';
-import { bg } from '../assets/index';
+import { bg } from '@/public/index';
 import { motion } from 'framer-motion';
 
 export default function About() {

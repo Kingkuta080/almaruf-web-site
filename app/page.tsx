@@ -1,15 +1,15 @@
 'use client';
 
 import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Principal from '@/components/Principal';
-import Depart from '@/components/Depart';
-import Count from '@/components/Count';
-import Admission from '@/components/Admission';
-import Elearn from '@/components/Elearn';
-import Partners from '@/components/Partners';
-import Best from '@/components/Best';
-import Contact from '@/components/Contact';
+import About from '@/components/About'
+import Principal from '@/components/Principal'
+import Depart from '@/components/Depart'
+import Count from '@/components/Count'
+import Admission from '@/components/Admission'
+import Elearn from '@/components/Elearn'
+import Partners from '@/components/Partners'
+import Best from '@/components/Best'
+import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
