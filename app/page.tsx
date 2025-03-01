@@ -1,17 +1,5 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import {
-  Users,
-  Trophy,
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-  Clock,
-} from 'lucide-react';
-import { useState, useEffect } from 'react';
 import Hero from '@/components/hero';
 import About from '@/components/About'
 import Principal from '@/components/Principal'

@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Nmcn, Nteb, P3, Yobe } from '@/assets';
+import { Nmcn, Nteb, P3, Yobe } from '@/assets/index';
 import { motion } from 'framer-motion';
 
 export default function Partners() {
