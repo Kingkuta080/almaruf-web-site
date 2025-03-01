@@ -94,6 +94,10 @@ export default function Principal() {
           ))}
         </div>
       </div>
+      <section className="principal">
+        <h2>Message from the Principal</h2>
+        <p>Welcome to our school. We are committed to providing quality education.</p>
+      </section>
     </div>
   );
 }
